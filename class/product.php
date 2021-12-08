@@ -37,17 +37,13 @@ class product
         $sql = $this->getAll();
         $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $data) {
-            echo "<div class='col-sm-3 pb-3'>";
-            echo "<div class='card border-dark rounded'>";
-            echo "<div class='card-body text-center'>";
-            echo "<input type='checkbox' name='id[]' class='delete-checkbox float-left' value=" . $data['id'] . " />";
-            echo "<p>Nama: " . $data['nama_produk'] . "</p>";
-            echo "<p>Ket: " . $data['keterangan'] . "</p>";
-            echo "<p>Harga: Rp." . $data['harga'] . "</p>";
-            echo "<p>Jumlah: " . $data['jumlah'] . "</p>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
+            echo "<tr>";
+            echo "<td><input type='checkbox' name='id[]' class='delete-checkbox' value=" . $data['id'] . " /></td>";
+            echo "<td>" . $data['nama_produk'] . "</td>";
+            echo "<td>" . $data['keterangan'] . "</td>";
+            echo "<td>Rp." . $data['harga'] . "</td>";
+            echo "<td>" . $data['jumlah'] . " Unit</td>";
+            echo "</tr>";
         }
     }
     public function goHome()
