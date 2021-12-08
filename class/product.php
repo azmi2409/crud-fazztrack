@@ -38,7 +38,7 @@ class product
         $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $data) {
             echo "<tr>";
-            echo "<td><input type='checkbox' name='id[]' class='delete-checkbox' value=" . $data['id'] . " /></td>";
+            echo "<td><input type='checkbox' name='id[]' class='delete-checkbox ml-4' value=" . $data['id'] . " /></td>";
             echo "<td>" . $data['nama_produk'] . "</td>";
             echo "<td>" . $data['keterangan'] . "</td>";
             echo "<td>Rp." . $data['harga'] . "</td>";
