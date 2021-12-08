@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $save = new product;
     //$data = $_POST['save'];
     $data = $_POST;
-    $save->saveProduct($data);
+    $save->addProduct($data);
     $save->goHome();
 }
 
