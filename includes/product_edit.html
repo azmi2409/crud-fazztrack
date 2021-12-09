@@ -13,7 +13,7 @@
                 <div class="row border-bottom border-dark mt-3 mb-5">
                     <div class="col-sm-9">
                         <span class="navbar-brand mb-0 h1">
-                            <h2>Product Edit</h2>
+                            <h2><?php echo "Product Edit : " . $data2['nama_produk'] . "</h2>"; ?>
                         </span>
                     </div>
                     <div class="col-sm-3">
@@ -37,7 +37,7 @@
                 <div class="form-group-row form-inline">
                     <label class="col-sm-4 col-form-label justify-content-start" style="width: 150px;" for="keterangan">Keterangan</label>
                     <div class="col-sm-8">
-                        <input type="form" class="form-control-sm" id="keterangan" name="keterangan" required="required" value=<? echo $data2['keterangan']; ?> >
+                        <? echo "<input type='form' class='form-control-sm' id='keterangan' name='keterangan' required='required' value=\"" . $data2['keterangan'] . "\">"; ?>
                     </div>
                 </div>
             </div>
